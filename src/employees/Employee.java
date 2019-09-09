@@ -1,35 +1,42 @@
 package employees;
 
 import java.util.HashMap;
-public class Employee {
-	private final String employeeId;
-	private final String employeeStatus;
-	private final Double hourlyRate;
-	private  Double hours;
-	HashMap<Integer,String>assignedProperty_List= new HashMap<Integer,String>();
+public abstract class  employee {
+    private String employeeID;
+    private String employStatus;
+    private double hourlyRate;
+    private double hours;
+    HashMap<String,String> assignedPropertyList;
 
-	public String getEmployeeId() {
-        return employeeId;
+    public employee(String employeeID, String employStatus, double hourlyRate, double hours, HashMap<String, String> assignedPropertyList)
+    {   this.employeeID = employeeID;
+        this.employStatus = employStatus;
+        this.hourlyRate = hourlyRate;
+        this.hours = hours;
+        this.assignedPropertyList = assignedPropertyList;
     }
-	public Employee(String employeeId, String employeeStatus, Double hourlyRate, Double hours) {
-		this.employeeId = employeeId;
-		this.employeeStatus = employeeStatus;
-		this.hourlyRate = hourlyRate;
-		this.hours = hours;
-	}
 
-	
-		
-    public String getEmployeeStatus() {
-        return employeeStatus;
-        }
+    public String getEmployeeID() {
+        return employeeID;
+    }
 
-	public Double getHourlyRate() {
-		return hourlyRate;
-	}
-	public Double getHours() {
-		return hours;
-	}
+    public String getEmployStatus() {
+        return employStatus;
+    }
 
+    public double getHourlyRate() {
+        return hourlyRate;
+    }
+
+    public double getHours() {
+        return hours;
+    }
+
+    public HashMap<String, String> getAssignedPropertyList() {
+        return assignedPropertyList;
+    }
+
+    abstract double calculateSalary();
 }
+
 
