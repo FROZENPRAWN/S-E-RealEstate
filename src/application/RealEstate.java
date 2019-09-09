@@ -47,11 +47,22 @@ public class RealEstate {
         String custName = null;
         String emailAddress = null;
         String passWord = null;
-        System.out.println("");
-
-
-
-    }
+        String passWord2 = null;
+        System.out.println("enter your information to register");
+        Scanner scan = new Scanner(System.in);
+        System.out.println("enter your customer name");
+        custName = scan.next ();
+        System.out.println("enter your email address");
+        emailAddress = scan.next ();
+        System.out.println("enter your email password");
+        passWord = scan.next ();
+        System.out.println ("confirm your password");
+        passWord2 = scan.next ();
+        if (passWord.equals ( passWord2 )){
+            System.out.println ( "register successfully" );
+        }
+        else {System.out.println ( "password mismatch " );
+        }
 
 }
 
