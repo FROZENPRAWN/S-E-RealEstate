@@ -42,7 +42,7 @@ public class RealEstate {
         }
         System.out.println(suburb_list.get(3000));
     }
-
+ public void register(){
     String custName = null;
             String emailAddress = null;
             String passWord = null;
